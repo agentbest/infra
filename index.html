@@ -3,216 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>長期インターン採用支援 - Infra代理店</title>
+    <title>Infra長期インターン採用代理店 - 成果にコミットする採用支援</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <style>
-        .infra-green { background-color: #2d8a7a; }
-        .infra-green-light { background-color: #3ba894; }
-        .infra-green-dark { background-color: #1f6b5e; }
-        .text-infra-green { color: #2d8a7a; }
-        .border-infra-green { border-color: #2d8a7a; }
-        .gradient-bg { 
-            background: linear-gradient(135deg, #2d8a7a 0%, #3ba894 100%); 
+        .gradient-bg {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
         }
-        .card-shadow {
-            box-shadow: 0 10px 25px rgba(45, 138, 122, 0.1);
+        .text-primary {
+            color: #059669;
         }
-        body { 
-            font-family: 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
-            line-height: 1.8;
+        .border-primary {
+            border-color: #059669;
         }
-        .hero-section {
-            background: linear-gradient(135deg, #2d8a7a 0%, #3ba894 50%, #4fb8a8 100%);
+        .bg-primary {
+            background-color: #059669;
         }
-        .stat-number { 
-            font-size: 3rem; 
-            font-weight: 700; 
-            color: #2d8a7a;
-        }
-        .section-title {
-            position: relative;
-            display: inline-block;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: #2d8a7a;
+        .hover-primary:hover {
+            background-color: #047857;
         }
     </style>
 </head>
-<body class="bg-gray-50">
-
+<body class="font-sans leading-relaxed text-gray-800">
+    
     <!-- Header Section -->
-    <section class="hero-section text-white py-20">
+    <header class="gradient-bg text-white py-16">
         <div class="container mx-auto px-6 text-center">
             <div class="mb-8">
-                <img src="https://page.gensparksite.com/v1/base64_upload/dbb2adad5e20273c9b4b8e66581695b7" alt="Infra Logo" class="mx-auto mb-8 bg-white p-4 rounded-lg shadow-lg" style="width: 200px;">
+                <img src="https://page.gensparksite.com/v1/base64_upload/dbb2adad5e20273c9b4b8e66581695b7" alt="Infraロゴ" class="mx-auto mb-6 bg-white p-4 rounded-lg" style="max-width: 300px;">
             </div>
-            
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
                 長期インターン採用を<br>
                 <span class="text-yellow-300">確実に成功させる</span><br>
-                専門コンサルティング
+                専門代理店サービス
             </h1>
-            
-            <p class="text-xl mb-8 opacity-90 max-w-3xl mx-auto">
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
                 創業期からのサービス知見と代理店としての専門性で<br>
                 企業様の採用課題を効果的に解決します
             </p>
-            
-            <div class="inline-block bg-yellow-400 text-gray-800 px-8 py-4 rounded-full font-semibold text-lg hover:bg-yellow-300 transition-colors cursor-pointer">
-                今すぐ採用を成功させる
+            <div class="bg-green-600 bg-opacity-50 rounded-lg py-4 px-6 inline-block">
+                <p class="text-lg font-semibold">今の挑戦が次に繋がる</p>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Problem Section -->
-    <section class="py-16 bg-white">
+    <!-- Statistics Section -->
+    <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 section-title">
-                    こんな採用課題を抱えていませんか？
-                </h2>
+                <h2 class="text-3xl font-bold text-primary mb-4">圧倒的な実績数値</h2>
+                <p class="text-lg text-gray-600">業界最大級のプラットフォーム「Infra」の力</p>
             </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center p-6 bg-red-50 rounded-lg border-l-4 border-red-400">
-                    <i class="fas fa-exclamation-triangle text-red-400 text-3xl mb-4"></i>
-                    <h3 class="font-semibold text-gray-800 mb-2">応募者が集まらない</h3>
-                    <p class="text-gray-600 text-sm">求人を出しても優秀な学生からの応募が少ない</p>
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-4xl font-bold text-primary mb-2">11.2万人</div>
+                    <div class="text-gray-600">累計学生登録数</div>
+                    <div class="text-sm text-gray-500 mt-2">毎月1,000-2,400名増加</div>
                 </div>
-                
-                <div class="text-center p-6 bg-red-50 rounded-lg border-l-4 border-red-400">
-                    <i class="fas fa-clock text-red-400 text-3xl mb-4"></i>
-                    <h3 class="font-semibold text-gray-800 mb-2">採用に時間がかかる</h3>
-                    <p class="text-gray-600 text-sm">選考プロセスが長期化し、他社に学生を取られる</p>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-4xl font-bold text-primary mb-2">1,530社</div>
+                    <div class="text-gray-600">掲載企業数</div>
+                    <div class="text-sm text-gray-500 mt-2">ベンチャー80% / 大手20%</div>
                 </div>
-                
-                <div class="text-center p-6 bg-red-50 rounded-lg border-l-4 border-red-400">
-                    <i class="fas fa-target text-red-400 text-3xl mb-4"></i>
-                    <h3 class="font-semibold text-gray-800 mb-2">ミスマッチが多い</h3>
-                    <p class="text-gray-600 text-sm">採用後に期待していた人材と違うことが判明</p>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-4xl font-bold text-primary mb-2">業界1位</div>
+                    <div class="text-gray-600">SEO主要キーワード</div>
+                    <div class="text-sm text-gray-500 mt-2">長期インターン関連検索</div>
                 </div>
-                
-                <div class="text-center p-6 bg-red-50 rounded-lg border-l-4 border-red-400">
-                    <i class="fas fa-cog text-red-400 text-3xl mb-4"></i>
-                    <h3 class="font-semibold text-gray-800 mb-2">運用が大変</h3>
-                    <p class="text-gray-600 text-sm">採用業務に工数がかかり、本業に集中できない</p>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <div class="text-4xl font-bold text-primary mb-2">42%</div>
+                    <div class="text-gray-600">上位校学生比率</div>
+                    <div class="text-sm text-gray-500 mt-2">東京一工・早慶・MARCH等</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Infra Platform Stats -->
-    <section class="py-16 bg-gray-100">
+    <!-- Student Database Section -->
+    <section class="py-16">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 section-title">
-                    Infraプラットフォームの圧倒的な実績
-                </h2>
-                <p class="text-gray-600">業界最大級の長期インターン専門プラットフォーム</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 mb-12">
-                <div class="text-center p-8 bg-white rounded-lg card-shadow">
-                    <div class="stat-number">9万+</div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">登録学生数</h3>
-                    <p class="text-gray-600">東大・早慶・MARCH中心の上位校学生データベース</p>
-                </div>
-                
-                <div class="text-center p-8 bg-white rounded-lg card-shadow">
-                    <div class="stat-number">1,500回</div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">年間相談会</h3>
-                    <p class="text-gray-600">学生との直接的な接点による質の高いマッチング</p>
-                </div>
-                
-                <div class="text-center p-8 bg-white rounded-lg card-shadow">
-                    <div class="stat-number">No.1</div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">掲載求人数</h3>
-                    <p class="text-gray-600">長期インターン分野で業界最大の求人掲載実績</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Value Add -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 section-title">
-                    代理店として提供する付加価値
-                </h2>
-                <p class="text-gray-600">Infraプラットフォームの力に加え、専門的なサポートを提供</p>
-            </div>
-            
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">質の高い学生データベース</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <div class="infra-green text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">求人設計コンサルティング</h3>
-                                <p class="text-gray-600">学生に魅力的な求人内容の設計から募集文章の最適化まで</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <div class="infra-green text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-search"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">ターゲット学生スカウト</h3>
-                                <p class="text-gray-600">9万人DBから最適な学生を選定し、効果的なスカウト配信</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <div class="infra-green text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">採用プロセス最適化</h3>
-                                <p class="text-gray-600">選考フローの改善提案と継続的なパフォーマンス分析</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <div class="infra-green text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-hands-helping"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-semibold text-gray-800 mb-2">運用代行サポート</h3>
-                                <p class="text-gray-600">日々の応募者対応から選考調整まで採用業務をトータルサポート</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="bg-gradient-to-br from-teal-50 to-green-50 p-8 rounded-lg">
-                    <h3 class="text-2xl font-bold text-infra-green mb-6 text-center">なぜ当代理店なのか？</h3>
+                    <h3 class="text-2xl font-semibold mb-6">学歴分布</h3>
                     <div class="space-y-4">
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-check-circle text-infra-green"></i>
-                            <span class="text-gray-700">創業期からのサービス深い理解</span>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">東京一工</span>
+                            <div class="flex items-center">
+                                <div class="w-32 bg-gray-200 rounded-full h-3 mr-3">
+                                    <div class="bg-primary h-3 rounded-full" style="width: 4%"></div>
+                                </div>
+                                <span class="text-sm font-semibold">4%</span>
+                            </div>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-check-circle text-infra-green"></i>
-                            <span class="text-gray-700">長期インターン市場の豊富な知見</span>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">早慶上理ICU</span>
+                            <div class="flex items-center">
+                                <div class="w-32 bg-gray-200 rounded-full h-3 mr-3">
+                                    <div class="bg-primary h-3 rounded-full" style="width: 17%"></div>
+                                </div>
+                                <span class="text-sm font-semibold">17%</span>
+                            </div>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-check-circle text-infra-green"></i>
-                            <span class="text-gray-700">企業ニーズに合わせたカスタマイズ対応</span>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">GMARCH/関関同立</span>
+                            <div class="flex items-center">
+                                <div class="w-32 bg-gray-200 rounded-full h-3 mr-3">
+                                    <div class="bg-primary h-3 rounded-full" style="width: 21%"></div>
+                                </div>
+                                <span class="text-sm font-semibold">21%</span>
+                            </div>
                         </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-check-circle text-infra-green"></i>
-                            <span class="text-gray-700">結果にコミットする専門チーム</span>
+                        <div class="flex justify-between items-center">
+                            <span class="font-medium">難関国公立</span>
+                            <div class="flex items-center">
+                                <div class="w-32 bg-gray-200 rounded-full h-3 mr-3">
+                                    <div class="bg-primary h-3 rounded-full" style="width: 8%"></div>
+                                </div>
+                                <span class="text-sm font-semibold">8%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">学年・経験分布</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-primary">72%</div>
+                            <div class="text-sm">大学3・4年生</div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-primary">45%</div>
+                            <div class="text-sm">3年生以前に登録</div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-primary">82%</div>
+                            <div class="text-sm">3ヶ月以上経験</div>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-primary">53%</div>
+                            <div class="text-sm">6ヶ月以上経験</div>
                         </div>
                     </div>
                 </div>
@@ -220,167 +150,258 @@
         </div>
     </section>
 
-    <!-- Service Process -->
-    <section class="py-16 bg-gray-100">
+    <!-- Service Features Section -->
+    <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 section-title">
-                    サービスの流れ
-                </h2>
-            </div>
-            
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="infra-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">ヒアリング</h3>
-                    <p class="text-gray-600 text-sm">採用要件と課題の詳細分析</p>
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">代理店サービス内容</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-edit text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">求人作成代行</h3>
+                    <p class="text-gray-600">魅力的な求人原稿を専門スタッフが作成。初回無料または5万円で対応。</p>
                 </div>
-                
-                <div class="text-center">
-                    <div class="infra-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">戦略設計</h3>
-                    <p class="text-gray-600 text-sm">最適な採用戦略とプロセスの提案</p>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-paper-plane text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">スカウト運用</h3>
+                    <p class="text-gray-600">月100通のスカウト機能で積極的に優秀学生にアプローチ。</p>
                 </div>
-                
-                <div class="text-center">
-                    <div class="infra-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">実行支援</h3>
-                    <p class="text-gray-600 text-sm">求人掲載からスカウトまで運用サポート</p>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-chart-line text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">戦略設計</h3>
+                    <p class="text-gray-600">採用戦略の設計から実行まで30万円でトータルサポート。</p>
                 </div>
-                
-                <div class="text-center">
-                    <div class="infra-green text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
-                    <h3 class="text-lg font-semibold text-gray-800 mb-2">継続改善</h3>
-                    <p class="text-gray-600 text-sm">結果分析と継続的な最適化提案</p>
+                <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+                    <i class="fas fa-headset text-4xl text-primary mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">CS支援</h3>
+                    <p class="text-gray-600">募集から採用後まで専門スタッフがサポート。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Success Cases -->
-    <section class="py-16 bg-white">
+    <!-- Pricing Section -->
+    <section class="py-16">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4 section-title">
-                    採用成功事例
-                </h2>
-            </div>
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">明確な料金体系</h2>
             
+            <!-- Subscription Plans -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-center mb-8">サブスクリプションプラン</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-primary transition-colors">
+                        <div class="text-center">
+                            <h4 class="text-lg font-semibold mb-2">2ヶ月プラン</h4>
+                            <div class="text-3xl font-bold text-primary mb-2">20万円</div>
+                            <div class="text-sm text-gray-600 mb-4">月額10万円</div>
+                            <ul class="text-sm space-y-2 text-left">
+                                <li>✓ 最大5求人掲載</li>
+                                <li>✓ スカウト100通/月</li>
+                                <li>✓ 求人作成代行5万円</li>
+                                <li>✓ CSサポート付き</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white border-2 border-primary rounded-lg p-6 relative">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-white px-3 py-1 rounded-full text-sm">
+                            人気
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-lg font-semibold mb-2">6ヶ月プラン</h4>
+                            <div class="text-3xl font-bold text-primary mb-2">50万円</div>
+                            <div class="text-sm text-gray-600 mb-4">月額8.3万円</div>
+                            <ul class="text-sm space-y-2 text-left">
+                                <li>✓ 最大5求人掲載</li>
+                                <li>✓ スカウト100通/月</li>
+                                <li>✓ 求人作成初回無料</li>
+                                <li>✓ CSサポート付き</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-primary transition-colors">
+                        <div class="text-center">
+                            <h4 class="text-lg font-semibold mb-2">12ヶ月プラン</h4>
+                            <div class="text-3xl font-bold text-primary mb-2">75万円</div>
+                            <div class="text-sm text-gray-600 mb-4">月額6.25万円</div>
+                            <ul class="text-sm space-y-2 text-left">
+                                <li>✓ 最大5求人掲載</li>
+                                <li>✓ スカウト100通/月</li>
+                                <li>✓ 求人作成初回無料</li>
+                                <li>✓ CSサポート付き</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-primary transition-colors">
+                        <div class="text-center">
+                            <h4 class="text-lg font-semibold mb-2">24ヶ月プラン</h4>
+                            <div class="text-3xl font-bold text-primary mb-2">120万円</div>
+                            <div class="text-sm text-gray-600 mb-4">月額5万円</div>
+                            <ul class="text-sm space-y-2 text-left">
+                                <li>✓ 最大5求人掲載</li>
+                                <li>✓ スカウト100通/月</li>
+                                <li>✓ 求人作成初回無料</li>
+                                <li>✓ CSサポート付き</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deposit Plans -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-center mb-8">デポジットプラン（成果報酬型）</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+                        <h4 class="text-xl font-semibold text-center mb-4 text-primary">総合職</h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span>1名採用</span>
+                                <span class="font-bold">9万円/名</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span>5名採用</span>
+                                <span class="font-bold">8万円/名</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span>10名採用</span>
+                                <span class="font-bold">7万円/名</span>
+                            </div>
+                            <div class="text-sm text-gray-600 mt-4">
+                                • 最長2年掲載可能<br>
+                                • 早期離職時（14日以内）追加費用なしで再採用可<br>
+                                • 求人作成代行5万円
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
+                        <h4 class="text-xl font-semibold text-center mb-4 text-primary">技術職</h4>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span>1名採用</span>
+                                <span class="font-bold">12万円/名</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span>5名採用</span>
+                                <span class="font-bold">11万円/名</span>
+                            </div>
+                            <div class="flex justify-between items-center border-b pb-2">
+                                <span>10名採用</span>
+                                <span class="font-bold">10万円/名</span>
+                            </div>
+                            <div class="text-sm text-gray-600 mt-4">
+                                • 最長2年掲載可能<br>
+                                • 早期離職時（14日以内）追加費用なしで再採用可<br>
+                                • 求人作成代行5万円
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Option Services -->
+            <div>
+                <h3 class="text-2xl font-semibold text-center mb-8">オプションサービス</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                    <div class="bg-white border rounded-lg p-4 text-center">
+                        <h4 class="font-semibold mb-2">戦略設計</h4>
+                        <div class="text-2xl font-bold text-primary mb-2">30万円</div>
+                        <p class="text-sm text-gray-600">採用戦略の設計</p>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 text-center">
+                        <h4 class="font-semibold mb-2">上位表示</h4>
+                        <div class="text-2xl font-bold text-primary mb-2">6万円</div>
+                        <p class="text-sm text-gray-600">2週間上位表示</p>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 text-center">
+                        <h4 class="font-semibold mb-2">求人枠追加</h4>
+                        <div class="text-2xl font-bold text-primary mb-2">3万円</div>
+                        <p class="text-sm text-gray-600">追加1枠あたり</p>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 text-center">
+                        <h4 class="font-semibold mb-2">DM送信</h4>
+                        <div class="text-2xl font-bold text-primary mb-2">5万円</div>
+                        <p class="text-sm text-gray-600">メールorLINE</p>
+                    </div>
+                    <div class="bg-white border rounded-lg p-4 text-center">
+                        <h4 class="font-semibold mb-2">スカウト追加</h4>
+                        <div class="text-2xl font-bold text-primary mb-2">3万円</div>
+                        <p class="text-sm text-gray-600">100通/30日</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">なぜ当社を選ぶのか</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-lg card-shadow">
-                    <div class="text-blue-600 text-2xl mb-4">IT系スタートアップ</div>
-                    <h3 class="font-semibold text-gray-800 mb-3">エンジニアインターン採用</h3>
-                    <p class="text-gray-600 text-sm mb-4">3ヶ月で5名の優秀な学生を採用。技術力とチームワークを両立する人材を確保。</p>
-                    <div class="text-infra-green font-semibold">採用期間: 3ヶ月 → 1ヶ月に短縮</div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rocket text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">創業期からの深い知見</h3>
+                    <p class="text-gray-600">サービス立ち上げ期から関わってきた経験により、Infraプラットフォームの特性と活用方法を熟知しています。</p>
                 </div>
-                
-                <div class="bg-gradient-to-br from-green-50 to-teal-50 p-6 rounded-lg card-shadow">
-                    <div class="text-green-600 text-2xl mb-4">マーケティング会社</div>
-                    <h3 class="font-semibold text-gray-800 mb-3">マーケティングインターン</h3>
-                    <p class="text-gray-600 text-sm mb-4">戦略的な求人設計により、即戦力となる学生を継続的に採用。</p>
-                    <div class="text-infra-green font-semibold">応募数: 5倍増加</div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">長期インターン市場のリーダー</h3>
+                    <p class="text-gray-600">8年間の市場牽引経験により、業界トレンドと成功パターンを把握し、最適な採用戦略をご提案します。</p>
                 </div>
-                
-                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-lg card-shadow">
-                    <div class="text-purple-600 text-2xl mb-4">コンサルティング</div>
-                    <h3 class="font-semibold text-gray-800 mb-3">ビジネス企画インターン</h3>
-                    <p class="text-gray-600 text-sm mb-4">上位校学生を中心とした質の高い母集団を形成し、選考通過率が大幅に改善。</p>
-                    <div class="text-infra-green font-semibold">選考通過率: 3倍向上</div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">実績に基づくサポート</h3>
+                    <p class="text-gray-600">豊富な成功事例とデータに基づいた効果的な採用手法で、企業様の目標達成をサポートします。</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="py-16 gradient-bg text-white">
+    <section class="py-16" id="contact">
         <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary mb-4">お問い合わせ</h2>
+                <p class="text-xl text-gray-600 mb-8">
+                    長期インターン採用でお困りの企業様、お気軽にご相談ください。<br>
+                    専門スタッフが詳しくご説明いたします。
+                </p>
+            </div>
+            
+            <!-- Google Form Embed -->
             <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold mb-4">
-                        長期インターン採用を成功させませんか？
-                    </h2>
-                    <p class="text-xl opacity-90">
-                        まずは無料相談でお話を聞かせください
-                    </p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h3 class="text-2xl font-semibold mb-6">お気軽にお問い合わせください</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-clock text-yellow-300 text-xl"></i>
-                                <span>平日 9:00-18:00</span>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-phone text-yellow-300 text-xl"></i>
-                                <span>お電話でのお問い合わせ</span>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-envelope text-yellow-300 text-xl"></i>
-                                <span>メールでのお問い合わせ</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white text-gray-800 p-8 rounded-lg card-shadow">
-                        <h3 class="text-xl font-semibold mb-6 text-center">無料相談お申し込み</h3>
-                        <form class="space-y-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">会社名</label>
-                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">お名前</label>
-                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">メールアドレス</label>
-                                <input type="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">採用予定職種</label>
-                                <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent">
-                                    <option>エンジニア</option>
-                                    <option>マーケティング</option>
-                                    <option>営業</option>
-                                    <option>企画</option>
-                                    <option>その他</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-2">ご相談内容</label>
-                                <textarea rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent" placeholder="採用に関するお悩みをお聞かせください"></textarea>
-                            </div>
-                            <button type="submit" class="w-full infra-green text-white py-3 px-6 rounded-lg font-semibold hover:bg-teal-700 transition-colors">
-                                無料相談を申し込む
-                            </button>
-                        </form>
-                    </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfYLjiGDybbEY6dEQzRxnqwOav5l6IHU-MbCKog1Jrh5F_nAA/viewform?embedded=true" width="100%" height="1641" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="gradient-bg text-white py-8">
         <div class="container mx-auto px-6 text-center">
             <div class="mb-4">
-                <img src="https://page.gensparksite.com/v1/base64_upload/dbb2adad5e20273c9b4b8e66581695b7" alt="Infra Logo" class="mx-auto bg-white p-2 rounded" style="width: 120px;">
+                <img src="https://page.gensparksite.com/v1/base64_upload/dbb2adad5e20273c9b4b8e66581695b7" alt="Infraロゴ" class="mx-auto mb-4 bg-white p-2 rounded" style="max-width: 150px;">
             </div>
-            <p class="text-gray-400 mb-4">Infra代理店による長期インターン採用支援サービス</p>
-            <p class="text-sm text-gray-500">今の挑戦が次に繋がる</p>
+            <p class="text-lg font-semibold mb-2">今の挑戦が次に繋がる</p>
+            <p class="text-sm opacity-90">
+                Infra長期インターン採用代理店 - あなたの採用成功をサポートします
+            </p>
         </div>
     </footer>
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"96f61c52d9f8fcc7","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"96f65fbaab26d3dd","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body>
 </html>
     <script id="html_badge_script1">
         window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
-            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDnQ2%2Fvexl9XuX%2FlFc72qSiLwxnzB1VANI5350FuNgeVRSe5UJCLw%2BYIpRPJ1LleIf5BWZ8Z61xD%2FQWyEJ4T77BnIJWUNYyRW4wj1H5SY0qeykjO7VWeDKoUxKrDWRoQiLuqiMkRe6m2wnlWofYxVVWMELABpDcF4lAm%2FEOmypxnUk3BpY%2BtaGK72VwNpU3EG1De3uZXXKY64hMIpEvrvEdOzgbOh6%2Bik1ejHrm1JgoU%2Fn%2FoJcY%2B6QcDjaVbjChRNjhgGgfGCVe63JXLqvTRX6slU0K3fL4JedrSAoqISPvovdN3INOPkQ4usWS9Aelxyg1eRByHNzM8OIKA5dSpJpG%2FxbgZZkJWpfVqu1S%2B%2FCj8AOA4ivmm4ZnVHNguXhemlrwXC8%2Fk49mvVmy9aKF5KdczjuSIENtVpgUECqV4%2BzGRmb7xlWn2jSXcbxAbDBOzfAetDu9RePu0LLKZW%2BDKb500CBjupi1Z7Vt0dyClAJPKY7Vpghib1yKsSdVVhRLpqug%3D%3D";
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDsNTmPq2OADo9x0QUF9WU2comXvjNNiqervCEhLJXXXErw6F87wUm4gMtHytgM7n5ADvP7l0eresdg8uLbFCGfmvxE164a0%2BkKQPyg595h%2FqDXCX6ugI41Z9wHwNefQXebqD0tHEVdYZPX4ydnt2UzBTEAhpq4tz09v%2FRLT6vtFkhq6yRmSVxxxnu8n5t72A6YmFL%2Fz7GwV91%2FxWkbyDlA%2B9QXeaaOLoNT1uJZ0BpZpOzzxpyw%2BUd3vf4QR%2BZbyIFY5QEkTu2Z9GJqp7VpsP8NXqukvaa%2FDpnV1rwxXetkv51uhA2ynlEA4dvE9%2BV%2BENxPAODMOyTmRX7wmIQWiZE19cVXQrMMhJ0SNGOrxdTHfDoKCQxW0Q7au%2FyMdrzubYzPII2hNcGqbo00JiFkutgKwZtXLKYSor7m1nsDlssoSqwQnqfTYzcP8OTve2EK4CZ2Ckkaxo9fto2%2BnSkiNkXDg8zKVoTLSGB6jOKpY4O%2BjqPpPb%2FZbuR93o1tCFH49A79gFBwB76ZrYXCLJh%2BGklMQ%3D";
         window.__genspark_locale = "ja-JP";
-        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDnQ2/vexl9XuX/lFc72qSiLwxnzB1VANI5350FuNgeVRSe5UJCLw+YIpRPJ1LleIf5BWZ8Z61xD/QWyEJ4T77BnIJWUNYyRW4wj1H5SY0qeykjO7VWeDKoUxKrDWRoQiLuqiMkRe6m2wnlWofYxVVWMELABpDcF4lAm/EOmypxnUk3BpY+taGK72VwNpU3EG1De3uZXXKY64hMIpEvrvEdOzgbOh6+ik1ejHrm1JgoU/n/oJcY+6QcDjaVbjChRNjhgGgfGCVe63JXLqvTRX6slU0K3fL4JedrSAoqISPvovdN3INOPkQ4usWS9Aelxyg1eRByHNzM8OIKA5dSpJpG/xbgZZkJWpfVqu1S+/Cj8AOA4ivmm4ZnVHNguXhemlrwXC8/k49mvVmy9aKF5KdczjuSIENtVpgUECqV4+zGRmb7xlWn2jSXcbxAbDBOzfAetDu9RePu0LLKZW+DKb500CBjupi1Z7Vt0dyClAJPKY7Vpghib1yKsSdVVhRLpqug==";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDsNTmPq2OADo9x0QUF9WU2comXvjNNiqervCEhLJXXXErw6F87wUm4gMtHytgM7n5ADvP7l0eresdg8uLbFCGfmvxE164a0+kKQPyg595h/qDXCX6ugI41Z9wHwNefQXebqD0tHEVdYZPX4ydnt2UzBTEAhpq4tz09v/RLT6vtFkhq6yRmSVxxxnu8n5t72A6YmFL/z7GwV91/xWkbyDlA+9QXeaaOLoNT1uJZ0BpZpOzzxpyw+Ud3vf4QR+ZbyIFY5QEkTu2Z9GJqp7VpsP8NXqukvaa/DpnV1rwxXetkv51uhA2ynlEA4dvE9+V+ENxPAODMOyTmRX7wmIQWiZE19cVXQrMMhJ0SNGOrxdTHfDoKCQxW0Q7au/yMdrzubYzPII2hNcGqbo00JiFkutgKwZtXLKYSor7m1nsDlssoSqwQnqfTYzcP8OTve2EK4CZ2Ckkaxo9fto2+nSkiNkXDg8zKVoTLSGB6jOKpY4O+jqPpPb/ZbuR93o1tCFH49A79gFBwB76ZrYXCLJh+GklMQ=";
     </script>
     
     <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
