@@ -1,540 +1,663 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Infra長期インターン採用代理店 - 成果にコミットする採用支援</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-  <style>
-    .gradient-bg { background: linear-gradient(135deg, #059669 0%, #047857 100%); }
-    .text-primary { color: #059669; }
-    .border-primary { border-color: #059669; }
-    .bg-primary { background-color: #059669; }
-    .hover-primary:hover { background-color: #047857; }
-    /* ヒーロー：Unsplashのフリー素材を背景に利用 */
-    .hero {
-      background-image: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1920&q=80");
-      background-size: cover;
-      background-position: center;
-      position: relative;
-    }
-    .hero::before {
-      content: "";
-      position: absolute; inset: 0;
-      background: linear-gradient(180deg, rgba(4,120,87,0.75), rgba(4,120,87,0.75));
-    }
-    .hero-inner { position: relative; z-index: 1; }
-    .unsplash-credit { font-size: 12px; opacity: .8; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infra長期インターン採用代理店｜株式会社エージェントベスト</title>
+<meta name="description" content="長期インターン採用プラットフォーム「Infra」の運用代理店サービス。求人作成代行・スカウト運用・CS支援まで、市場黎明期から関わるメンバーが企業さまの長期インターン採用を支援します。">
+<link rel="canonical" href="https://infra.agent-best.net/">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#0B1A32">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="株式会社エージェントベスト">
+<meta property="og:title" content="Infra長期インターン採用代理店｜株式会社エージェントベスト">
+<meta property="og:description" content="長期インターン採用を確実に成功させる専門代理店サービス。求人作成代行・スカウト運用・CS支援まで一気通貫で支援します。">
+<meta property="og:url" content="https://infra.agent-best.net/">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B1A32'/%3E%3Ctext x='16' y='21' font-family='Helvetica,Arial,sans-serif' font-size='13' font-weight='bold' fill='%23fff' text-anchor='middle'%3EAB%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --paper:#F6F5F2;--surface:#FFFFFF;--surface-2:#EFECE6;
+    --ink:#1B1A17;--ink-soft:#5B564D;--ink-faint:#8D877C;
+    --line:#E6E1D8;--line-strong:#D2CBBE;
+    --accent:#C2610C;--accent-strong:#A44F08;--accent-ink:#8A4207;--accent-tint:#FAEBDA;
+    --success:#12A150;--success-ink:#0B7A3B;--success-tint:#DCF3E6;
+    --navy:#1D2417;--on-navy:#F2EFE9;--on-navy-soft:#B6B0A2;--on-navy-line:#3A422F;
+    --sans:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",YuGothic,"Noto Sans JP","Segoe UI",sans-serif;
+    --mono:"SFMono-Regular","SF Mono","Cascadia Code",Consolas,"Roboto Mono",monospace;
+    --maxw:1080px;--radius:16px;
+    --shadow:0 1px 2px rgba(27,26,23,.05),0 16px 38px -20px rgba(27,26,23,.28);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.75;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+  h1,h2,h3,h4,p{margin:0}
+  a{color:inherit;text-decoration:none}
+  img,svg{max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:.95rem;padding:14px 26px;border-radius:11px;
+    cursor:pointer;border:1px solid transparent;transition:transform .15s ease,background .2s ease,box-shadow .2s ease;
+    white-space:nowrap;font-family:inherit}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 26px -10px var(--accent)}
+  .btn-primary:hover{background:var(--accent-strong);transform:translateY(-2px)}
+  .btn-ghost{border-color:var(--line-strong);color:var(--ink);background:var(--surface)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent-ink)}
+  .btn-lg{padding:17px 34px;font-size:1.02rem}
+  .btn .arw{font-family:var(--mono)}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(246,245,242,.88);
+    backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800}
+  .brand .mk{width:30px;height:30px;border-radius:8px;flex:none;background:linear-gradient(145deg,var(--accent),var(--navy));
+    display:grid;place-items:center;color:#fff;font-family:var(--mono);font-size:.82rem;font-weight:700}
+  .brand .nm{font-size:.98rem;line-height:1.2}
+  .brand .nm small{display:block;font-family:var(--mono);font-size:.56rem;letter-spacing:.12em;color:var(--ink-faint);font-weight:600}
+  .nav-links{display:flex;gap:22px;margin-left:auto;margin-right:6px}
+  .nav-links a{font-size:.88rem;font-weight:700;color:var(--ink-soft)}
+  .nav-links a:hover{color:var(--accent-ink)}
+  .nav .cta-mini{font-size:.9rem;padding:10px 20px}
+  @media (max-width:900px){.nav-links{display:none}}
+  @media (max-width:560px){.brand .nm .full{display:none}}
+
+  .hero{position:relative;background:var(--navy);color:var(--on-navy);overflow:hidden;border-bottom:1px solid var(--on-navy-line)}
+  .hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(48% 44% at 84% 8%,rgba(194,97,12,.38),transparent 62%),
+      radial-gradient(42% 42% at 6% 96%,rgba(18,161,80,.2),transparent 64%)}
+  .hero-grid{position:absolute;inset:0;opacity:.5;pointer-events:none;
+    background-image:linear-gradient(var(--on-navy-line) 1px,transparent 1px);background-size:100% 48px;
+    -webkit-mask-image:linear-gradient(180deg,transparent,#000 16%,#000 74%,transparent);
+            mask-image:linear-gradient(180deg,transparent,#000 16%,#000 74%,transparent)}
+  .hero-in{position:relative;padding:66px 0 54px}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;
+    color:var(--on-navy);font-weight:700;background:rgba(255,255,255,.08);
+    border:1px solid var(--on-navy-line);padding:7px 14px;border-radius:999px}
+  h1.hero-title{font-weight:900;font-size:clamp(2rem,5.4vw,3.5rem);line-height:1.3;margin:22px 0 0;text-wrap:balance}
+  h1.hero-title .hl{color:#F0A557}
+  .hero-lead{margin:22px 0 0;max-width:38em;color:var(--on-navy-soft);font-size:1.05rem}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin:30px 0 0;align-items:center}
+  .hero-cta .note{font-family:var(--mono);font-size:.72rem;color:var(--on-navy-soft)}
+  .hero-trust{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:44px 0 0}
+  .htile{background:rgba(255,255,255,.05);border:1px solid var(--on-navy-line);border-radius:13px;padding:18px}
+  .htile .n{font-family:var(--mono);font-weight:800;font-size:1.5rem;line-height:1;font-variant-numeric:tabular-nums}
+  .htile .n em{font-style:normal;font-size:.85rem;color:#F0A557;margin-left:2px}
+  .htile .l{font-size:.76rem;color:var(--on-navy-soft);margin-top:8px}
+  .htile .s{font-size:.68rem;color:var(--on-navy-soft);opacity:.75;margin-top:4px}
+  @media (max-width:760px){.hero-trust{grid-template-columns:repeat(2,1fr)}}
+
+  section{padding:78px 0}
+  .band{background:var(--surface-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .sec-head{display:flex;flex-direction:column;gap:12px;margin-bottom:42px;max-width:46em}
+  .sec-head .kick{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ink);font-weight:600}
+  .sec-head.center{margin:0 auto 44px;text-align:center;align-items:center}
+  h2{font-weight:900;font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.34;text-wrap:balance}
+  .sec-head p{color:var(--ink-soft);font-size:1.02rem}
+
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media (max-width:820px){.grid3{grid-template-columns:1fr 1fr}.grid2{grid-template-columns:1fr}}
+  @media (max-width:560px){.grid3{grid-template-columns:1fr}}
+  .card .ico{width:44px;height:44px;border-radius:11px;background:var(--accent-tint);color:var(--accent-ink);
+    display:grid;place-items:center;margin-bottom:16px}
+  .card h4{font-size:1.1rem;font-weight:800;margin-bottom:8px}
+  .card p{color:var(--ink-soft);font-size:.94rem}
+
+  .bars{display:flex;flex-direction:column;gap:16px}
+  .bar-row{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;font-size:.92rem}
+  .bar-row .lb{font-weight:700;white-space:nowrap}
+  .bar-track{height:10px;background:var(--surface-2);border-radius:999px;overflow:hidden;border:1px solid var(--line)}
+  .bar-fill{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#E8944A);border-radius:999px}
+  .bar-row .pc{font-family:var(--mono);font-weight:800;font-variant-numeric:tabular-nums;min-width:3em;text-align:right}
+
+  .mini4{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .mini{background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center}
+  .mini .n{font-family:var(--mono);font-weight:800;font-size:1.5rem;color:var(--accent-ink);line-height:1}
+  .mini .l{font-size:.78rem;color:var(--ink-soft);margin-top:8px}
+
+  .ilist{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:10px}
+  .ilist li{display:flex;gap:10px;font-size:.94rem;color:var(--ink-soft)}
+  .ilist li .ck{width:20px;height:20px;border-radius:50%;background:var(--success-tint);color:var(--success-ink);
+    flex:none;display:grid;place-items:center;font-size:.66rem;font-weight:900;margin-top:3px}
+
+  .cases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media (max-width:860px){.cases{grid-template-columns:1fr 1fr}}
+  @media (max-width:600px){.cases{grid-template-columns:1fr}}
+  .case .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;color:var(--accent-ink);font-weight:700}
+  .case h4{margin-top:6px;font-size:1rem}
+  .case .role{font-size:.8rem;color:var(--ink-faint);margin-bottom:12px}
+  .case ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:.9rem;color:var(--ink-soft)}
+  .case ul b{color:var(--accent-ink);font-family:var(--mono)}
+  .case .how{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:.78rem;color:var(--ink-faint)}
+
+  .plans4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:start}
+  @media (max-width:900px){.plans4{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.plans4{grid-template-columns:1fr}}
+  .plan{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;box-shadow:var(--shadow);position:relative}
+  .plan.feat{border-color:var(--accent);box-shadow:0 1px 2px rgba(27,26,23,.05),0 22px 44px -22px var(--accent)}
+  .plan .tagbest{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;
+    font-size:.7rem;font-weight:800;letter-spacing:.08em;padding:6px 16px;border-radius:999px;white-space:nowrap}
+  .plan h4{font-size:1rem;font-weight:800}
+  .plan .amt{font-family:var(--mono);font-weight:800;font-size:1.9rem;line-height:1;margin-top:10px;font-variant-numeric:tabular-nums}
+  .plan .sub{font-size:.8rem;color:var(--ink-faint);margin-top:6px}
+  .plan .hr{height:1px;background:var(--line);margin:18px 0}
+  .plan .ilist li{font-size:.86rem}
+
+  .rate{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0}
+  .rate li{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px dashed var(--line-strong);font-size:.95rem;color:var(--ink-soft)}
+  .rate li:last-child{border-bottom:0}
+  .rate li b{font-family:var(--mono);font-weight:800;color:var(--ink);font-size:1.05rem}
+
+  .final{position:relative;overflow:hidden;background:var(--navy);color:var(--on-navy);border-radius:22px;padding:52px 40px;text-align:center}
+  .final::before{content:"";position:absolute;inset:0;background:
+    radial-gradient(46% 80% at 18% 6%,rgba(194,97,12,.36),transparent 60%),
+    radial-gradient(46% 80% at 86% 94%,rgba(18,161,80,.2),transparent 60%)}
+  .final>*{position:relative}
+  .final .lbl{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#F0A557}
+  .final h2{margin-top:14px}
+  .final p{color:var(--on-navy-soft);margin:16px auto 0;max-width:34em}
+
+  .formcard{max-width:640px;margin:30px auto 0;background:var(--surface);border:1px solid var(--line);border-radius:18px;
+    padding:clamp(24px,4vw,40px);box-shadow:var(--shadow);text-align:left;color:var(--ink)}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:.86rem;font-weight:800;letter-spacing:.03em;margin-bottom:7px}
+  .req{font-size:.64rem;font-weight:700;color:var(--accent-ink);border:1px solid var(--accent);border-radius:999px;
+    padding:.1em .7em;margin-left:.5em;letter-spacing:.08em;vertical-align:1px}
+  .field input,.field textarea{width:100%;font-family:inherit;font-size:1rem;color:var(--ink);background:var(--paper);
+    border:1px solid var(--line-strong);border-radius:10px;padding:.8em 1em;transition:border-color .2s,box-shadow .2s}
+  .field textarea{resize:vertical;line-height:1.8}
+  .field input:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-tint)}
+  .form-error{color:#B23B3B;font-size:.86rem;min-height:1.2em;margin-bottom:.4rem}
+  .submit-btn{width:100%;justify-content:center;font-size:1rem;padding-block:1.05em}
+  .submit-btn:disabled{opacity:.6;cursor:default;transform:none}
+  .privacy-note{margin-top:14px;font-size:.75rem;color:var(--ink-faint);text-align:center}
+  .thanks{text-align:center;padding:16px 0}
+  .thanks-mark{width:46px;height:46px;border-radius:50%;border:2px solid var(--success);display:inline-block;position:relative}
+  .thanks-mark::after{content:"";position:absolute;left:15px;top:8px;width:12px;height:21px;
+    border-right:2px solid var(--success);border-bottom:2px solid var(--success);transform:rotate(40deg)}
+  .thanks h3{font-size:1.3rem;font-weight:900;margin-top:16px}
+  .thanks p{color:var(--ink-soft);margin-top:10px;font-size:.94rem}
+  .thanks .sched{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:.9rem;color:var(--ink-soft)}
+  .thanks .sched a{color:var(--accent-ink);font-weight:800;text-decoration:underline;text-underline-offset:3px}
+
+  .cinfo{display:flex;flex-direction:column;gap:12px}
+  .cinfo .row{display:grid;grid-template-columns:88px 1fr;gap:14px;align-items:start;font-size:.94rem}
+  .cinfo .row .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;color:var(--ink-faint);padding-top:5px}
+  .cinfo .row .v a{color:var(--accent-ink);font-weight:700}
+
+  footer.ft{border-top:1px solid var(--line);padding:40px 0;color:var(--ink-faint);font-size:.82rem;background:var(--surface)}
+  .ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px;padding-bottom:24px;border-bottom:1px solid var(--line)}
+  @media (max-width:760px){.ft-grid{grid-template-columns:1fr}}
+  .ft-grid h5{font-size:.82rem;font-weight:800;color:var(--ink);margin:0 0 10px}
+  .ft-grid ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+  .ft-grid a{color:var(--ink-soft);font-weight:600}
+  .ft-grid a:hover{color:var(--accent-ink)}
+  .ft-base{padding-top:20px;line-height:1.9}
+
+  .rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
 </head>
-<body class="font-sans leading-relaxed text-gray-800">
+<body>
 
-  <!-- Header / Hero -->
-  <header class="hero text-white py-16">
-    <div class="container mx-auto px-6 hero-inner text-center">
-      <div class="mb-8">
-        <img src="https://page.gensparksite.com/v1/base64_upload/dbb2adad5e20273c9b4b8e66581695b7"
-             alt="Infraロゴ"
-             class="mx-auto mb-6 bg-white p-4 rounded-lg"
-             style="max-width: 300px;">
-      </div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Infra長期インターン採用代理店">
+      <span class="mk">AB</span>
+      <span class="nm"><span class="full">Infra長期インターン採用代理店</span><small>AGENT BEST INC.</small></span>
+    </a>
+    <nav class="nav-links">
+      <a href="#database">学生データ</a>
+      <a href="#cases">採用事例</a>
+      <a href="#service">サービス</a>
+      <a href="#price">料金</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary cta-mini">お問い合わせ</a>
+  </div>
+</header>
 
-      <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-        長期インターン採用を<br>
-        <span class="text-yellow-300">確実に成功させる</span><br>
-        専門代理店サービス
-      </h1>
+<main id="top">
 
-      <!-- 文言差し替え -->
-      <p class="text-xl mb-8 max-w-3xl mx-auto">
-        長期インターン市場の黎明期から取り組んだメンバーによるコンサルティングで、<br>
-        企業様の採用課題を効果的に解決します。
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid"></div>
+    <div class="wrap hero-in">
+      <span class="hero-eyebrow">採用ご担当者さま向け ／ 長期インターン採用 ／ Infra公認代理店</span>
+      <h1 class="hero-title">長期インターン採用を、<br><span class="hl">確実に成功</span>させる。</h1>
+      <p class="hero-lead">
+        長期インターン市場の黎明期から取り組んできたメンバーが、業界最大級のプラットフォーム「Infra」を活用した採用を、
+        求人作成からスカウト運用、採用後のフォローまで一気通貫でご支援します。
       </p>
-
-      <!-- CTA：ボタン2つ（お問い合わせフォーム／日程調整） -->
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYLjiGDybbEY6dEQzRxnqwOav5l6IHU-MbCKog1Jrh5F_nAA/viewform?usp=dialog"
-           class="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold px-6 py-3 rounded-lg shadow inline-flex items-center justify-center"
-           target="_blank" rel="noopener">
-          <i class="fas fa-envelope-open-text mr-2"></i> お問い合わせフォームはこちら
-        </a>
-        <a href="https://timerex.net/s/r_matsuoka/6666f3b5/"
-           class="bg-white/90 hover:bg-white text-gray-900 font-semibold px-6 py-3 rounded-lg shadow inline-flex items-center justify-center"
-           target="_blank" rel="noopener">
-          <i class="fas fa-calendar-check mr-2 text-primary"></i> まずは話を聞きたい方はこちら
-        </a>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary btn-lg">無料で相談する<span class="arw">→</span></a>
+        <a href="#price" class="btn btn-ghost btn-lg" style="border-color:var(--on-navy-line);color:var(--on-navy);background:transparent">料金を見る</a>
+        <span class="note">フォーム送信のみ／営業のお電話はいたしません</span>
       </div>
-
-      <div class="mt-6 unsplash-credit">
-        Photo: Brooke Cagle / Unsplash（商用可・クレジット任意）
+      <div class="hero-trust">
+        <div class="htile"><div class="n">11.2<em>万人</em></div><div class="l">累計学生登録数</div><div class="s">毎月1,000〜2,400名増加</div></div>
+        <div class="htile"><div class="n">1,530<em>社</em></div><div class="l">掲載企業数</div><div class="s">ベンチャー80% / 大手20%</div></div>
+        <div class="htile"><div class="n">業界<em>1位</em></div><div class="l">SEO主要キーワード</div><div class="s">長期インターン関連検索</div></div>
+        <div class="htile"><div class="n">42<em>%</em></div><div class="l">上位校学生比率</div><div class="s">東京一工・早慶・MARCH等</div></div>
       </div>
     </div>
-  </header>
+  </section>
 
-  <!-- Statistics -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-primary mb-4">圧倒的な実績数値</h2>
-        <p class="text-lg text-gray-600">業界最大級のプラットフォーム「Infra」の力</p>
+  <!-- DATABASE -->
+  <section id="database">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kick">01 ・ 学生データベース</span>
+        <h2>質の高い学生に、直接アプローチできます。</h2>
+        <p>Infraに登録している学生の内訳です。母集団の質が、長期インターン採用の成否を分けます。</p>
       </div>
-      <div class="grid md:grid-cols-4 gap-8 text-center">
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <div class="text-4xl font-bold text-primary mb-2">11.2万人</div>
-          <div class="text-gray-600">累計学生登録数</div>
-          <div class="text-sm text-gray-500 mt-2">毎月1,000-2,400名増加</div>
+      <div class="grid2">
+        <div class="card rv">
+          <h4>学歴分布</h4>
+          <div class="bars" style="margin-top:20px">
+            <div class="bar-row"><span class="lb">東京一工</span><span class="bar-track"><span class="bar-fill" style="width:4%"></span></span><span class="pc">4%</span></div>
+            <div class="bar-row"><span class="lb">早慶上理ICU</span><span class="bar-track"><span class="bar-fill" style="width:17%"></span></span><span class="pc">17%</span></div>
+            <div class="bar-row"><span class="lb">GMARCH/関関同立</span><span class="bar-track"><span class="bar-fill" style="width:21%"></span></span><span class="pc">21%</span></div>
+            <div class="bar-row"><span class="lb">難関国公立</span><span class="bar-track"><span class="bar-fill" style="width:8%"></span></span><span class="pc">8%</span></div>
+          </div>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <div class="text-4xl font-bold text-primary mb-2">1,530社</div>
-          <div class="text-gray-600">掲載企業数</div>
-          <div class="text-sm text-gray-500 mt-2">ベンチャー80% / 大手20%</div>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <div class="text-4xl font-bold text-primary mb-2">業界1位</div>
-          <div class="text-gray-600">SEO主要キーワード</div>
-          <div class="text-sm text-gray-500 mt-2">長期インターン関連検索</div>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-          <div class="text-4xl font-bold text-primary mb-2">42%</div>
-          <div class="text-gray-600">上位校学生比率</div>
-          <div class="text-sm text-gray-500 mt-2">東京一工・早慶・MARCH等</div>
+        <div class="card rv">
+          <h4>学年・経験分布</h4>
+          <div class="mini4" style="margin-top:20px">
+            <div class="mini"><div class="n">72%</div><div class="l">大学3・4年生</div></div>
+            <div class="mini"><div class="n">45%</div><div class="l">3年生以前に登録</div></div>
+            <div class="mini"><div class="n">82%</div><div class="l">3ヶ月以上の経験あり</div></div>
+            <div class="mini"><div class="n">53%</div><div class="l">6ヶ月以上の経験あり</div></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Student Database -->
-  <section class="py-16">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center text-primary mb-12">質の高い学生データベース</h2>
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h3 class="text-2xl font-semibold mb-6">学歴分布</h3>
-          <div class="space-y-4">
-            <div class="flex justify-between items-center">
-              <span class="font-medium">東京一工</span>
-              <div class="flex items-center">
-                <div class="w-32 bg-gray-200 rounded-full h-3 mr-3">
-                  <div class="bg-primary h-3 rounded-full" style="width: 4%"></div>
-                </div>
-                <span class="text-sm font-semibold">4%</span>
-              </div>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="font-medium">早慶上理ICU</span>
-              <div class="flex items-center">
-                <div class="w-32 bg-gray-200 rounded-full h-3 mr-3">
-                  <div class="bg-primary h-3 rounded-full" style="width: 17%"></div>
-                </div>
-                <span class="text-sm font-semibold">17%</span>
-              </div>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="font-medium">GMARCH/関関同立</span>
-              <div class="flex items-center">
-                <div class="w-32 bg-gray-200 rounded-full h-3 mr-3">
-                  <div class="bg-primary h-3 rounded-full" style="width: 21%"></div>
-                </div>
-                <span class="text-sm font-semibold">21%</span>
-              </div>
-            </div>
-            <div class="flex justify-between items-center">
-              <span class="font-medium">難関国公立</span>
-              <div class="flex items-center">
-                <div class="w-32 bg-gray-200 rounded-full h-3 mr-3">
-                  <div class="bg-primary h-3 rounded-full" style="width: 8%"></div>
-                </div>
-                <span class="text-sm font-semibold">8%</span>
-              </div>
-            </div>
-          </div>
+  <!-- CASES -->
+  <section class="band" id="cases">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kick">02 ・ 採用事例</span>
+        <h2>長期インターン採用の事例。</h2>
+        <p>※一部匿名化。各社の成果・KPIをもとに要点を抜粋しています。</p>
+      </div>
+      <div class="cases">
+        <div class="card case rv">
+          <div class="k">CASE 01</div>
+          <h4>SaaSスタートアップ（従業員40名）</h4>
+          <div class="role">ビジネス職（営業／CS）</div>
+          <ul>
+            <li>スカウト配信最適化で返信率 <b>+18pt</b></li>
+            <li>面談実施までのリードタイム <b>-35%</b></li>
+            <li>採用数 <b>6名/3ヶ月</b>（90日後の定着率 92%）</li>
+          </ul>
+          <div class="how">施策：原稿ABテスト／送信時間帯調整／選考同意導線の短縮</div>
         </div>
-
-        <div>
-          <h3 class="text-2xl font-semibold mb-6">学年・経験分布</h3>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-gray-50 p-4 rounded-lg text-center">
-              <div class="text-2xl font-bold text-primary">72%</div>
-              <div class="text-sm">大学3・4年生</div>
-            </div>
-            <div class="bg-gray-50 p-4 rounded-lg text-center">
-              <div class="text-2xl font-bold text-primary">45%</div>
-              <div class="text-sm">3年生以前に登録</div>
-            </div>
-            <div class="bg-gray-50 p-4 rounded-lg text-center">
-              <div class="text-2xl font-bold text-primary">82%</div>
-              <div class="text-sm">3ヶ月以上経験</div>
-            </div>
-            <div class="bg-gray-50 p-4 rounded-lg text-center">
-              <div class="text-2xl font-bold text-primary">53%</div>
-              <div class="text-sm">6ヶ月以上経験</div>
-            </div>
-          </div>
+        <div class="card case rv">
+          <div class="k">CASE 02</div>
+          <h4>DX支援企業（従業員120名）</h4>
+          <div class="role">エンジニア見習い／アシスタント</div>
+          <ul>
+            <li>技術課題付きエントリーでミスマッチ <b>-41%</b></li>
+            <li>書類→面談のCVR <b>+23pt</b></li>
+            <li>採用数 <b>8名/4ヶ月</b>（うち3名が新規事業へ配属）</li>
+          </ul>
+          <div class="how">施策：課題設計／要件スコアリング／教育フローの事前開示</div>
         </div>
-
+        <div class="card case rv">
+          <div class="k">CASE 03</div>
+          <h4>メディア運営社（従業員25名）</h4>
+          <div class="role">コンテンツ企画／編集</div>
+          <ul>
+            <li>原稿テンプレ刷新で応募率 <b>1.8倍</b></li>
+            <li>入社後2週間の離脱率 <b>-60%</b></li>
+            <li>採用単価を <b>-35%</b> 圧縮</li>
+          </ul>
+          <div class="how">施策：要件の言語化／オンボーディング可視化／先輩紹介記事</div>
+        </div>
+        <div class="card case rv">
+          <div class="k">CASE 04</div>
+          <h4>地方発スタートアップ（従業員18名）</h4>
+          <div class="role">マーケ／広報</div>
+          <ul>
+            <li>遠隔面談×就業体験で母集団 <b>+2.3倍</b></li>
+            <li>内定承諾率 <b>+19pt</b></li>
+            <li>採用数 <b>4名/2ヶ月</b></li>
+          </ul>
+          <div class="how">施策：体験設計／地方在住者向けPR／交通費サポート</div>
+        </div>
+        <div class="card case rv">
+          <div class="k">CASE 05</div>
+          <h4>BtoBマーケ企業（従業員60名）</h4>
+          <div class="role">インサイドセールス</div>
+          <ul>
+            <li>スクリプト共通化で商談創出効率 <b>+28%</b></li>
+            <li>週次振り返りでPDCA速度 <b>+45%</b></li>
+            <li>採用数 <b>5名/3ヶ月</b></li>
+          </ul>
+          <div class="how">施策：教育設計／スコアリング／可視化ダッシュボード</div>
+        </div>
+        <div class="card case rv">
+          <div class="k">CASE 06</div>
+          <h4>Fintech企業（従業員80名）</h4>
+          <div class="role">データアナリスト見習い</div>
+          <ul>
+            <li>SQL簡易課題で合格率 <b>+22pt</b></li>
+            <li>オンボーディング短縮 <b>-30%</b></li>
+            <li>採用数 <b>3名/2ヶ月</b></li>
+          </ul>
+          <div class="how">施策：課題設計／メンター制度／ナレッジ管理</div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:32px" class="rv">
+        <a href="#contact" class="btn btn-primary btn-lg">自社に近い事例を相談する<span class="arw">→</span></a>
       </div>
     </div>
   </section>
 
-  <!-- 新設：長期インターン採用事例 -->
-  <section class="py-16 bg-white" id="cases">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-primary mb-4">長期インターン採用事例</h2>
-        <p class="text-lg text-gray-600">※一部匿名化。各社の成果・KPIをもとに要点を抜粋しています。</p>
+  <!-- SERVICE -->
+  <section id="service">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kick">03 ・ サービス内容</span>
+        <h2>代理店として、運用を代行します。</h2>
       </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Case 1 -->
-        <article class="bg-gray-50 rounded-xl shadow p-6 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <img src="https://images.unsplash.com/photo-1602016753481-2f87f8e0d2b8?auto=format&fit=crop&w=200&q=60"
-                 alt="SaaSスタートアップ"
-                 class="w-12 h-12 rounded object-cover">
-            <div>
-              <h3 class="font-semibold">SaaSスタートアップ（従業員40名）</h3>
-              <p class="text-sm text-gray-500">ビジネス職（営業/CS）</p>
-            </div>
-          </div>
-          <ul class="text-sm text-gray-700 space-y-2 mb-4">
-            <li>・スカウト配信最適化で返信率 <span class="font-semibold text-primary">+18pt</span></li>
-            <li>・面談実施までのリードタイム <span class="font-semibold text-primary">-35%</span></li>
-            <li>・採用数 <span class="font-semibold text-primary">6名/3ヶ月</span>（定着率 90日後 <span class="font-semibold">92%</span>）</li>
-          </ul>
-          <div class="mt-auto text-xs text-gray-500">施策：原稿ABテスト／送信時間帯調整／選考同意導線の短縮</div>
-        </article>
-
-        <!-- Case 2 -->
-        <article class="bg-gray-50 rounded-xl shadow p-6 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=200&q=60"
-                 alt="DX支援企業"
-                 class="w-12 h-12 rounded object-cover">
-            <div>
-              <h3 class="font-semibold">DX支援企業（従業員120名）</h3>
-              <p class="text-sm text-gray-500">エンジニア見習い／アシスタント</p>
-            </div>
-          </div>
-          <ul class="text-sm text-gray-700 space-y-2 mb-4">
-            <li>・技術課題付きエントリーでミスマッチ <span class="font-semibold text-primary">-41%</span></li>
-            <li>・書類→面談のCVR <span class="font-semibold text-primary">+23pt</span></li>
-            <li>・採用数 <span class="font-semibold text-primary">8名/4ヶ月</span>（うち3名が新規事業へ配属）</li>
-          </ul>
-          <div class="mt-auto text-xs text-gray-500">施策：課題設計／要件スコアリング／教育フローの事前開示</div>
-        </article>
-
-        <!-- Case 3 -->
-        <article class="bg-gray-50 rounded-xl shadow p-6 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=60"
-                 alt="メディア運営社"
-                 class="w-12 h-12 rounded object-cover">
-            <div>
-              <h3 class="font-semibold">メディア運営社（従業員25名）</h3>
-              <p class="text-sm text-gray-500">コンテンツ企画/編集</p>
-            </div>
-          </div>
-          <ul class="text-sm text-gray-700 space-y-2 mb-4">
-            <li>・原稿テンプレ刷新で応募率 <span class="font-semibold text-primary">1.8倍</span></li>
-            <li>・入社後2週間の離脱率 <span class="font-semibold text-primary">-60%</span></li>
-            <li>・採用単価を <span class="font-semibold text-primary">-35%</span> 圧縮</li>
-          </ul>
-          <div class="mt-auto text-xs text-gray-500">施策：要件の言語化／オンボーディング可視化／先輩紹介記事</div>
-        </article>
-
-        <!-- Case 4 -->
-        <article class="bg-gray-50 rounded-xl shadow p-6 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?auto=format&fit=crop&w=200&q=60"
-                 alt="地方発スタートアップ"
-                 class="w-12 h-12 rounded object-cover">
-            <div>
-              <h3 class="font-semibold">地方発スタートアップ（従業員18名）</h3>
-              <p class="text-sm text-gray-500">マーケ/広報</p>
-            </div>
-          </div>
-          <ul class="text-sm text-gray-700 space-y-2 mb-4">
-            <li>・遠隔面談×就業体験で母集団 <span class="font-semibold text-primary">+2.3倍</span></li>
-            <li>・内定承諾率 <span class="font-semibold text-primary">+19pt</span></li>
-            <li>・採用数 <span class="font-semibold text-primary">4名/2ヶ月</span></li>
-          </ul>
-          <div class="mt-auto text-xs text-gray-500">施策：体験設計／地方在住者向けPR／交通費サポート</div>
-        </article>
-
-        <!-- Case 5 -->
-        <article class="bg-gray-50 rounded-xl shadow p-6 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=200&q=60"
-                 alt="BtoBマーケ企業"
-                 class="w-12 h-12 rounded object-cover">
-            <div>
-              <h3 class="font-semibold">BtoBマーケ企業（従業員60名）</h3>
-              <p class="text-sm text-gray-500">インサイドセールス</p>
-            </div>
-          </div>
-          <ul class="text-sm text-gray-700 space-y-2 mb-4">
-            <li>・スクリプト共通化で商談創出効率 <span class="font-semibold text-primary">+28%</span></li>
-            <li>・週次振り返りでPDCA速度 <span class="font-semibold text-primary">+45%</span></li>
-            <li>・採用数 <span class="font-semibold text-primary">5名/3ヶ月</span></li>
-          </ul>
-          <div class="mt-auto text-xs text-gray-500">施策：教育設計／スコアリング／可視化ダッシュボード</div>
-        </article>
-
-        <!-- Case 6 -->
-        <article class="bg-gray-50 rounded-xl shadow p-6 flex flex-col">
-          <div class="flex items-center gap-3 mb-4">
-            <img src="https://images.unsplash.com/photo-1529336953121-adb0f2446a82?auto=format&fit=crop&w=200&q=60"
-                 alt="Fintech企業"
-                 class="w-12 h-12 rounded object-cover">
-            <div>
-              <h3 class="font-semibold">Fintech企業（従業員80名）</h3>
-              <p class="text-sm text-gray-500">データアナリスト見習い</p>
-            </div>
-          </div>
-          <ul class="text-sm text-gray-700 space-y-2 mb-4">
-            <li>・SQL簡易課題で合格率 <span class="font-semibold text-primary">+22pt</span></li>
-            <li>・オンボーディング短縮 <span class="font-semibold text-primary">-30%</span></li>
-            <li>・採用数 <span class="font-semibold text-primary">3名/2ヶ月</span></li>
-          </ul>
-          <div class="mt-auto text-xs text-gray-500">施策：課題設計／メンター制度／ナレッジ管理</div>
-        </article>
-      </div>
-
-      <!-- 事例CTA -->
-      <div class="text-center mt-12">
-        <div class="inline-flex flex-col sm:flex-row gap-4">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYLjiGDybbEY6dEQzRxnqwOav5l6IHU-MbCKog1Jrh5F_nAA/viewform?usp=dialog"
-             class="bg-primary hover-primary text-white font-semibold px-6 py-3 rounded-lg shadow inline-flex items-center justify-center"
-             target="_blank" rel="noopener">
-            <i class="fas fa-file-alt mr-2"></i> 事例の詳細資料を請求する
-          </a>
-          <a href="https://timerex.net/s/r_matsuoka/6666f3b5/"
-             class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-6 py-3 rounded-lg shadow inline-flex items-center justify-center transition-colors"
-             target="_blank" rel="noopener">
-            <i class="fas fa-handshake mr-2"></i> 自社に近い事例を相談する
-          </a>
+      <div class="grid3">
+        <div class="card rv">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg></div>
+          <h4>求人作成代行</h4>
+          <p>魅力的な求人原稿を専門スタッフが作成。初回無料または5万円で対応します。</p>
+        </div>
+        <div class="card rv">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4z"/></svg></div>
+          <h4>スカウト運用</h4>
+          <p>月100通のスカウト機能を活用し、優秀な学生へ積極的にアプローチします。</p>
+        </div>
+        <div class="card rv">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15v-3a8 8 0 1116 0v3"/><path d="M18 19a2 2 0 002-2v-2h-2a2 2 0 000 4zM6 19a2 2 0 01-2-2v-2h2a2 2 0 010 4z"/></svg></div>
+          <h4>CS支援</h4>
+          <p>募集の立ち上げから採用後まで、専門スタッフが継続的にサポートします。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Service Features -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center text-primary mb-12">代理店サービス内容</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <i class="fas fa-edit text-4xl text-primary mb-4"></i>
-          <h3 class="text-xl font-semibold mb-3">求人作成代行</h3>
-          <p class="text-gray-600">魅力的な求人原稿を専門スタッフが作成。初回無料または5万円で対応。</p>
+  <!-- PRICING -->
+  <section class="band" id="price">
+    <div class="wrap">
+      <div class="sec-head center rv">
+        <span class="kick">04 ・ 料金体系</span>
+        <h2>明確な料金体系です。</h2>
+        <p>継続的に採用するならサブスクリプション、まず1名からならデポジット（成果報酬）。</p>
+      </div>
+
+      <h3 style="text-align:center;font-size:1.05rem;font-weight:800;margin-bottom:26px" class="rv">サブスクリプションプラン</h3>
+      <div class="plans4">
+        <div class="plan rv">
+          <h4>2ヶ月プラン</h4>
+          <div class="amt">20<span style="font-size:.5em">万円</span></div>
+          <div class="sub">月額 10万円</div>
+          <div class="hr"></div>
+          <ul class="ilist" style="margin-top:0">
+            <li><span class="ck">✓</span><span>最大5求人掲載</span></li>
+            <li><span class="ck">✓</span><span>スカウト100通/月</span></li>
+            <li><span class="ck">✓</span><span>求人作成代行 5万円</span></li>
+            <li><span class="ck">✓</span><span>CSサポート付き</span></li>
+          </ul>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <i class="fas fa-paper-plane text-4xl text-primary mb-4"></i>
-          <h3 class="text-xl font-semibold mb-3">スカウト運用</h3>
-          <p class="text-gray-600">月100通のスカウト機能で積極的に優秀学生にアプローチ。</p>
+        <div class="plan feat rv">
+          <span class="tagbest">人気</span>
+          <h4>6ヶ月プラン</h4>
+          <div class="amt">50<span style="font-size:.5em">万円</span></div>
+          <div class="sub">月額 8.3万円</div>
+          <div class="hr"></div>
+          <ul class="ilist" style="margin-top:0">
+            <li><span class="ck">✓</span><span>最大5求人掲載</span></li>
+            <li><span class="ck">✓</span><span>スカウト100通/月</span></li>
+            <li><span class="ck">✓</span><span>求人作成 初回無料</span></li>
+            <li><span class="ck">✓</span><span>CSサポート付き</span></li>
+          </ul>
         </div>
-        <!-- 「戦略設計」は削除済み -->
-        <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-          <i class="fas fa-headset text-4xl text-primary mb-4"></i>
-          <h3 class="text-xl font-semibold mb-3">CS支援</h3>
-          <p class="text-gray-600">募集から採用後まで専門スタッフがサポート。</p>
+        <div class="plan rv">
+          <h4>12ヶ月プラン</h4>
+          <div class="amt">75<span style="font-size:.5em">万円</span></div>
+          <div class="sub">月額 6.25万円</div>
+          <div class="hr"></div>
+          <ul class="ilist" style="margin-top:0">
+            <li><span class="ck">✓</span><span>最大5求人掲載</span></li>
+            <li><span class="ck">✓</span><span>スカウト100通/月</span></li>
+            <li><span class="ck">✓</span><span>求人作成 初回無料</span></li>
+            <li><span class="ck">✓</span><span>CSサポート付き</span></li>
+          </ul>
+        </div>
+        <div class="plan rv">
+          <h4>24ヶ月プラン</h4>
+          <div class="amt">120<span style="font-size:.5em">万円</span></div>
+          <div class="sub">月額 5万円</div>
+          <div class="hr"></div>
+          <ul class="ilist" style="margin-top:0">
+            <li><span class="ck">✓</span><span>最大5求人掲載</span></li>
+            <li><span class="ck">✓</span><span>スカウト100通/月</span></li>
+            <li><span class="ck">✓</span><span>求人作成 初回無料</span></li>
+            <li><span class="ck">✓</span><span>CSサポート付き</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="text-align:center;font-size:1.05rem;font-weight:800;margin:48px 0 26px" class="rv">デポジットプラン（成果報酬型）</h3>
+      <div class="grid2">
+        <div class="card rv">
+          <h4 style="text-align:center;color:var(--accent-ink)">総合職</h4>
+          <ul class="rate" style="margin-top:14px">
+            <li><span>1名採用</span><b>9万円 / 名</b></li>
+            <li><span>5名採用</span><b>8万円 / 名</b></li>
+            <li><span>10名採用</span><b>7万円 / 名</b></li>
+          </ul>
+          <p style="margin-top:16px;font-size:.82rem;color:var(--ink-faint)">
+            ・最長2年掲載可能<br>・早期離職時（14日以内）は追加費用なしで再採用可<br>・求人作成代行 5万円
+          </p>
+        </div>
+        <div class="card rv">
+          <h4 style="text-align:center;color:var(--accent-ink)">技術職</h4>
+          <ul class="rate" style="margin-top:14px">
+            <li><span>1名採用</span><b>12万円 / 名</b></li>
+            <li><span>5名採用</span><b>11万円 / 名</b></li>
+            <li><span>10名採用</span><b>10万円 / 名</b></li>
+          </ul>
+          <p style="margin-top:16px;font-size:.82rem;color:var(--ink-faint)">
+            ・最長2年掲載可能<br>・早期離職時（14日以内）は追加費用なしで再採用可<br>・求人作成代行 5万円
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Pricing -->
-  <section class="py-16">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center text-primary mb-12">明確な料金体系</h2>
-
-      <!-- Subscription -->
-      <div class="mb-16">
-        <h3 class="text-2xl font-semibold text-center mb-8">サブスクリプションプラン</h3>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-primary transition-colors">
-            <div class="text-center">
-              <h4 class="text-lg font-semibold mb-2">2ヶ月プラン</h4>
-              <div class="text-3xl font-bold text-primary mb-2">20万円</div>
-              <div class="text-sm text-gray-600 mb-4">月額10万円</div>
-              <ul class="text-sm space-y-2 text-left">
-                <li>✓ 最大5求人掲載</li>
-                <li>✓ スカウト100通/月</li>
-                <li>✓ 求人作成代行5万円</li>
-                <li>✓ CSサポート付き</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="bg-white border-2 border-primary rounded-lg p-6 relative">
-            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-primary text-white px-3 py-1 rounded-full text-sm">
-              人気
-            </div>
-            <div class="text-center">
-              <h4 class="text-lg font-semibold mb-2">6ヶ月プラン</h4>
-              <div class="text-3xl font-bold text-primary mb-2">50万円</div>
-              <div class="text-sm text-gray-600 mb-4">月額8.3万円</div>
-              <ul class="text-sm space-y-2 text-left">
-                <li>✓ 最大5求人掲載</li>
-                <li>✓ スカウト100通/月</li>
-                <li>✓ 求人作成初回無料</li>
-                <li>✓ CSサポート付き</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-primary transition-colors">
-            <div class="text-center">
-              <h4 class="text-lg font-semibold mb-2">12ヶ月プラン</h4>
-              <div class="text-3xl font-bold text-primary mb-2">75万円</div>
-              <div class="text-sm text-gray-600 mb-4">月額6.25万円</div>
-              <ul class="text-sm space-y-2 text-left">
-                <li>✓ 最大5求人掲載</li>
-                <li>✓ スカウト100通/月</li>
-                <li>✓ 求人作成初回無料</li>
-                <li>✓ CSサポート付き</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-primary transition-colors">
-            <div class="text-center">
-              <h4 class="text-lg font-semibold mb-2">24ヶ月プラン</h4>
-              <div class="text-3xl font-bold text-primary mb-2">120万円</div>
-              <div class="text-sm text-gray-600 mb-4">月額5万円</div>
-              <ul class="text-sm space-y-2 text-left">
-                <li>✓ 最大5求人掲載</li>
-                <li>✓ スカウト100通/月</li>
-                <li>✓ 求人作成初回無料</li>
-                <li>✓ CSサポート付き</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <!-- WHY -->
+  <section id="why">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kick">05 ・ 選ばれる理由</span>
+        <h2>なぜ、当社に任せるのか。</h2>
       </div>
-
-      <!-- Deposit (成果報酬) -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold text-center mb-8">デポジットプラン（成果報酬型）</h3>
-        <div class="grid md:grid-cols-2 gap-8">
-          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
-            <h4 class="text-xl font-semibold text-center mb-4 text-primary">総合職</h4>
-            <div class="space-y-4">
-              <div class="flex justify-between items-center border-b pb-2">
-                <span>1名採用</span><span class="font-bold">9万円/名</span>
-              </div>
-              <div class="flex justify-between items-center border-b pb-2">
-                <span>5名採用</span><span class="font-bold">8万円/名</span>
-              </div>
-              <div class="flex justify-between items-center border-b pb-2">
-                <span>10名採用</span><span class="font-bold">7万円/名</span>
-              </div>
-              <div class="text-sm text-gray-600 mt-4">
-                ・最長2年掲載可能<br>
-                ・早期離職時（14日以内）追加費用なしで再採用可<br>
-                ・求人作成代行5万円
-              </div>
-            </div>
-          </div>
-          <div class="bg-white border-2 border-gray-200 rounded-lg p-6">
-            <h4 class="text-xl font-semibold text-center mb-4 text-primary">技術職</h4>
-            <div class="space-y-4">
-              <div class="flex justify-between items-center border-b pb-2">
-                <span>1名採用</span><span class="font-bold">12万円/名</span>
-              </div>
-              <div class="flex justify-between items-center border-b pb-2">
-                <span>5名採用</span><span class="font-bold">11万円/名</span>
-              </div>
-              <div class="flex justify-between items-center border-b pb-2">
-                <span>10名採用</span><span class="font-bold">10万円/名</span>
-              </div>
-              <div class="text-sm text-gray-600 mt-4">
-                ・最長2年掲載可能<br>
-                ・早期離職時（14日以内）追加費用なしで再採用可<br>
-                ・求人作成代行5万円
-              </div>
-            </div>
-          </div>
+      <div class="grid3">
+        <div class="card rv">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19l4-8 6-6 4 4-6 6z"/><path d="M9 11l4 4"/></svg></div>
+          <h4>創業期からの深い知見</h4>
+          <p>サービス立ち上げ期から関わってきた経験により、Infraプラットフォームの特性と活用方法を熟知しています。</p>
         </div>
-      </div>
-
-      <!-- オプションサービスは削除 -->
-
-      <!-- 2次CTA（下部にも導線設置） -->
-      <div class="mt-12 text-center">
-        <div class="inline-flex flex-col sm:flex-row gap-4">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYLjiGDybbEY6dEQzRxnqwOav5l6IHU-MbCKog1Jrh5F_nAA/viewform?usp=dialog"
-             class="bg-primary hover-primary text-white font-semibold px-6 py-3 rounded-lg shadow inline-flex items-center justify-center"
-             target="_blank" rel="noopener">
-            <i class="fas fa-envelope mr-2"></i> お問い合わせフォームはこちら
-          </a>
-          <a href="https://timerex.net/s/r_matsuoka/6666f3b5/"
-             class="border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-6 py-3 rounded-lg shadow inline-flex items-center justify-center transition-colors"
-             target="_blank" rel="noopener">
-            <i class="fas fa-calendar-day mr-2"></i> まずは話を聞きたい方はこちら
-          </a>
+        <div class="card rv">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div>
+          <h4>長期インターン市場のリーダー</h4>
+          <p>8年間の市場牽引経験により、業界トレンドと成功パターンを把握し、最適な採用戦略をご提案します。</p>
+        </div>
+        <div class="card rv">
+          <div class="ico" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 20h18"/><path d="M6 16v-5M11 16V7M16 16v-8M21 16v-3"/></svg></div>
+          <h4>実績に基づくサポート</h4>
+          <p>豊富な成功事例とデータに基づいた効果的な採用手法で、企業さまの目標達成をサポートします。</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Choose Us -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center text-primary mb-12">なぜ当社を選ぶのか</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-rocket text-white text-2xl"></i>
+  <!-- COMPANY -->
+  <section class="band" id="company">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="kick">06 ・ 運営会社</span>
+        <h2>株式会社エージェントベスト</h2>
+      </div>
+      <div class="grid2">
+        <div class="card rv">
+          <div class="cinfo">
+            <div class="row"><span class="k">設立</span><span class="v">2020年4月1日</span></div>
+            <div class="row"><span class="k">所在地</span><span class="v">東京都港区六本木四丁目8番地7号 六本木嶋田ビル5階</span></div>
+            <div class="row"><span class="k">許可番号</span><span class="v">有料職業紹介事業 許可番号 13-ユ-316964</span></div>
+            <div class="row"><span class="k">公式サイト</span><span class="v"><a href="https://www.agent-best.net/" target="_blank" rel="noopener">www.agent-best.net</a></span></div>
           </div>
-          <h3 class="text-xl font-semibold mb-3">創業期からの深い知見</h3>
-          <p class="text-gray-600">サービス立ち上げ期から関わってきた経験により、Infraプラットフォームの特性と活用方法を熟知しています。</p>
         </div>
-        <div class="text-center">
-          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-users text-white text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">長期インターン市場のリーダー</h3>
-          <p class="text-gray-600">8年間の市場牽引経験により、業界トレンドと成功パターンを把握し、最適な採用戦略をご提案します。</p>
-        </div>
-        <div class="text-center">
-          <div class="w-20 h-20 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-            <i class="fas fa-chart-line text-white text-2xl"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-3">実績に基づくサポート</h3>
-          <p class="text-gray-600">豊富な成功事例とデータに基づいた効果的な採用手法で、企業様の目標達成をサポートします。</p>
+        <div class="card rv" style="display:flex;flex-direction:column;justify-content:center">
+          <p style="font-size:1.02rem;font-weight:800;line-height:1.8">デジタルディバイドを解消し、<br>フラットな経済活動に貢献する。</p>
+          <p style="margin-top:12px;font-size:.88rem;color:var(--ink-faint)">ミドル・ハイクラス特化の転職・採用支援／IT・スタートアップ・M&amp;A・コンサル領域</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="gradient-bg text-white py-8">
-    <div class="container mx-auto px-6 text-center">
-      <div class="mb-4">
-        <img src="https://page.gensparksite.com/v1/base64_upload/dbb2adad5e20273c9b4b8e66581695b7"
-             alt="Infraロゴ"
-             class="mx-auto mb-4 bg-white p-2 rounded"
-             style="max-width: 150px;">
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="final rv">
+        <span class="lbl">Contact ・ 相談無料</span>
+        <h2>まずは、採用のお悩みからお聞かせください。</h2>
+        <p>採用ご担当者さま向けの窓口です。内容を確認のうえ、担当者よりご連絡いたします。</p>
+
+        <div class="formcard">
+          <form id="contact-form" novalidate>
+            <div class="field">
+              <label for="company">会社名 <span class="req">必須</span></label>
+              <input type="text" id="company" name="company" required autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="name">お名前 <span class="req">必須</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="email">メールアドレス <span class="req">必須</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="message">お問い合わせ内容 <span class="req">必須</span></label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            <p class="form-error" id="form-error" role="alert"></p>
+            <button type="submit" class="btn btn-primary submit-btn" id="submit-btn">送信する <span class="arw" aria-hidden="true">→</span></button>
+            <p class="privacy-note">送信いただいた情報は、お問い合わせ対応の目的にのみ利用いたします。</p>
+          </form>
+
+          <div class="thanks" id="thanks" hidden>
+            <span class="thanks-mark" aria-hidden="true"></span>
+            <h3>送信しました</h3>
+            <p>お問い合わせありがとうございます。<br>内容を確認のうえ、担当者よりご連絡いたします。</p>
+            <p class="sched">
+              お急ぎの場合は、こちらから打ち合わせの日程を直接ご予約いただけます。<br>
+              <a href="https://timerex.net/s/r_matsuoka/6666f3b5/" target="_blank" rel="noopener">日程を選んで予約する ↗</a>
+            </p>
+          </div>
+        </div>
       </div>
-      <p class="text-sm opacity-90">
-        Infra長期インターン採用代理店 - あなたの採用成功をサポートします
-      </p>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <!-- （必要であれば）Genspark関連スクリプト。HTMLの</body>直前にまとめて配置 -->
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
-    integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
-    data-cf-beacon='{"rayId":"96f663c62947eb89","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}'
-    crossorigin="anonymous"></script>
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <h5>Infra長期インターン採用代理店</h5>
+        <p>株式会社エージェントベストが運営する、長期インターン採用の代理店サービスです。</p>
+      </div>
+      <div>
+        <h5>コンテンツ</h5>
+        <ul>
+          <li><a href="#database">学生データベース</a></li>
+          <li><a href="#cases">採用事例</a></li>
+          <li><a href="#service">サービス内容</a></li>
+          <li><a href="#price">料金体系</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>関連サイト</h5>
+        <ul>
+          <li><a href="https://www.agent-best.net/" target="_blank" rel="noopener">エージェントベスト公式サイト ↗</a></li>
+          <li><a href="https://scout.agent-best.net/" target="_blank" rel="noopener">スカウト代行サービス ↗</a></li>
+          <li><a href="https://scoutdaikou-offerbox.agent-best.net/" target="_blank" rel="noopener">OfferBox運用代行 ↗</a></li>
+          <li><a href="https://green.agent-best.net/" target="_blank" rel="noopener">Green運用代行 ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-base">
+      東京都港区六本木四丁目8番地7号 六本木嶋田ビル5階／有料職業紹介事業 許可番号 13-ユ-316964<br>
+      &copy; 株式会社エージェントベスト
+    </div>
+  </div>
+</footer>
 
-  <script id="html_badge_script1">
-    window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDsNTmPq2OADo9x0QUF9WU2comXvjNNiqervCEhLJXXXErw6F87wUm4gMtHytgM7n5ADvP7l0eresdg8uLbFCGfmvxE164a0%2BkKQPyg595h%2FqDXCX6ugI41Z9wHwNefQXebqD0tHEVdYZPX4ydnt2UzBTEAhpq4tz09v%2FRLT6vtFkhq6yRmSVxxxnu8n5t72A6YmFL%2Fz7GwV91%2FxWkbyDlA%2B9QXeaaOLoNT1uJZ0BpZpOzzxpyw%2BUd3vf4QR%2BZbyIFY5QEkTu2Z9GJqp7VpsP8NXqukvaa%2FDpnV1rwxXetkv51uhA2ynlEA4dvE9%2BV%2BENxPAODMOyTmRX7wmIQWiZE19cVXQrMMhJ0SNGOrxdTHfDoKCQxW0Q7au%2FyMdrzubYzPII2hNcGqbo00JiFkutgKwZtXLKYSor7m1nsDlssoSqwQnqfTYzcP8OTve2EK4CZ2Ckkaxo9fto2%2BnSkiNkXDg8zKVoTLSGB6jOKpY4O%2BjqPpPb%2FZbuR93o1tCFH49A79gFBwB76ZrYXCLJh%2BGklMQ%3D";
-    window.__genspark_locale = "ja-JP";
-    window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDsNTmPq2OADo9x0QUF9WU2comXvjNNiqervCEhLJXXXErw6F87wUm4gMtHytgM7n5ADvP7l0eresdg8uLbFCGfmvxE164a0+kKQPyg595h/qDXCX6ugI41Z9wHwNefQXebqD0tHEVdYZPX4ydnt2UzBTEAhpq4tz09v/RLT6vtFkhq6yRmSVxxxnu8n5t72A6YmFL/z7GwV91/xWkbyDlA+9QXeaaOLoNT1uJZ0BpZpOzzxpyw+Ud3vf4QR+ZbyIFY5QEkTu2Z9GJqp7VpsP8NXqukvaa/DpnV1rwxXetkv51uhA2ynlEA4dvE9+V+ENxPAODMOyTmRX7wmIQWiZE19cVXQrMMhJ0SNGOrxdTHfDoKCQxW0Q7au/yMdrzubYzPII2hNcGqbo00JiFkutgKwZtXLKYSor7m1nsDlssoSqwQnqfTYzcP8OTve2EK4CZ2Ckkaxo9fto2+nSkiNkXDg8zKVoTLSGB6jOKpY4O+jqPpPb/ZbuR93o1tCFH49A79gFBwB76ZrYXCLJh+GklMQ=";
-  </script>
-  <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+<script>
+(function(){
+  var els=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){Array.prototype.forEach.call(els,function(e){e.classList.add('in')});}
+  else{
+    var io=new IntersectionObserver(function(en){
+      en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+    },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+    Array.prototype.forEach.call(els,function(e,i){e.style.transitionDelay=(Math.min(i%3,2)*70)+'ms';io.observe(e);});
+  }
+
+  // お問い合わせ：コーポレートサイト（agent-best.net/contact）と同一のGoogleフォームへ送信
+  var FORM_ACTION='https://docs.google.com/forms/d/e/1FAIpQLSd8Zk9Rxsg292K8R_ttnRYa5d4uXMBkSFrnlEVTFts6feRx6g/formResponse';
+  var ENTRY={company:'entry.1620407772',name:'entry.2140471957',email:'entry.417521654',message:'entry.1952858857'};
+  var SOURCE='Infra長期インターン採用代理店LP（infra.agent-best.net）';
+
+  var form=document.getElementById('contact-form'),
+      thanks=document.getElementById('thanks'),
+      errBox=document.getElementById('form-error'),
+      submitBtn=document.getElementById('submit-btn');
+  if(!form)return;
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    errBox.textContent='';
+    var get=function(id){return document.getElementById(id).value.trim();};
+    var company=get('company'),name=get('name'),email=get('email'),message=get('message');
+    if(!company||!name||!email||!message){errBox.textContent='すべての項目をご入力ください。';return;}
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){errBox.textContent='メールアドレスの形式をご確認ください。';return;}
+
+    submitBtn.disabled=true;submitBtn.textContent='送信中...';
+    var data=new FormData();
+    data.append(ENTRY.company,company);
+    data.append(ENTRY.name,name);
+    data.append(ENTRY.email,email);
+    data.append(ENTRY.message,message+'\n\n---\nお問い合わせ元：'+SOURCE);
+
+    fetch(FORM_ACTION,{method:'POST',mode:'no-cors',body:data})
+      .then(function(){
+        form.hidden=true;thanks.hidden=false;
+        thanks.scrollIntoView({behavior:'smooth',block:'center'});
+      })
+      .catch(function(){
+        submitBtn.disabled=false;submitBtn.textContent='送信する';
+        errBox.textContent='送信に失敗しました。お手数ですが、時間をおいて再度お試しください。';
+      });
+  });
+})();
+</script>
 </body>
 </html>
